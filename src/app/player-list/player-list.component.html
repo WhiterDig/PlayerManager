@@ -1,0 +1,39 @@
+<mat-toolbar
+color = 'primary'
+>
+  Players
+</mat-toolbar>
+<div
+  class="centerer"
+  >
+  <ng-container
+    *ngFor="let item of list"
+    >
+    <div
+      class="playerList"
+      >
+        {{ item.name }}
+        <button
+          mat-button
+          mat-icon-button
+          (click)= "viewPlayer(item)"
+          >
+          <mat-icon>
+              arrow_forward
+          </mat-icon>
+        </button>
+    </div>
+    <mat-divider></mat-divider>
+  </ng-container>
+</div>
+<button
+  mat-button
+  mat-mini-fab
+  class = "addButton"
+  (click)= "addPlayer()"
+  color = "primary"
+  >
+  <mat-icon>
+    add
+  </mat-icon>
+</button>
